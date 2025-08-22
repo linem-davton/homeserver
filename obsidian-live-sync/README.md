@@ -29,8 +29,9 @@ docker compose up -d
 
 ## Generate the Setup URI
 
+Ensure that the `.env` file is set up with the CouchDB credentials and PASSPHRASE, then run the following command to generate the setup URI:
+
 ```bash
-export $(cat .env | xargs)
 ./gen-setupuri.sh
 ```
 
@@ -39,8 +40,7 @@ export $(cat .env | xargs)
 - Update the `.env` file with the `SETUP_URI` and `PASSPHRASE`.
 
 ```bash
-export $(cat .env | xargs)
-deno run -A decrypy.ts
+./decode-setupuri.sh
 ```
 
 ## Cloudflare Tunnel
