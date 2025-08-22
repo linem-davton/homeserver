@@ -1,0 +1,14 @@
+services:
+  couchdb:
+    image: couchdb:latest
+    container_name: couchdb-for-ols
+    user: 5984:5984
+    environment:
+      - COUCHDB_USER=${COUCHDB_ADMIN_USERNAME}
+      - COUCHDB_PASSWORD=${COUCHDB_ADMIN_PASSWORD}
+    volumes:
+      - ./couchdb-data:/opt/couchdb/data
+      - ./couchdb-etc:/opt/couchdb/etc/local.d
+    ports:
+      - 5984:5984
+    restart: unless-stopped
