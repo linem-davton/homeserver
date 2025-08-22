@@ -1,6 +1,7 @@
 # Getting Started
 
 ## Dependencies
+- Plugin: https://github.com/vrtmrz/obsidian-livesync
 
 ```bash
 
