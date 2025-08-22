@@ -1,7 +1,8 @@
 # Getting Started
 
 ## Dependencies
-- Plugin: https://github.com/vrtmrz/obsidian-livesync
+
+- Obsidian Plugin: https://github.com/vrtmrz/obsidian-livesync
 
 ```bash
 
@@ -21,13 +22,16 @@ COUCHDB_HOST=localhost
 
 ```
 
-## Start CouchDB
+## Setup CouchDB
+
+- Make sure `.env` is configured with the CouchDB credentials and host.
 
 ```bash
+./setup_couchdb.sh
 docker compose up -d
 ```
 
-## Generate the Setup URI
+## Generate the Setup URI for LiveSync Plugin
 
 Ensure that the `.env` file is set up with the CouchDB credentials and PASSPHRASE, then run the following command to generate the setup URI:
 
@@ -42,5 +46,3 @@ Ensure that the `.env` file is set up with the CouchDB credentials and PASSPHRAS
 ```bash
 ./decode-setupuri.sh
 ```
-
-## Cloudflare Tunnel
