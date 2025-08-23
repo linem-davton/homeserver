@@ -1,12 +1,22 @@
 - Media:
-    - Jellyfin:
+    - Movies:
         href: https://flix.taverncloud.win # Your Jellyfin URL
-        description: Media Server
+        description: Movies, TV Shows, and more
         icon: jellyfin.png
 
-    - Immich:
+    - Music:
+        href: https://music.taverncloud.win # Your Jellyfin Music URL
+        description: Music Library
+        icon: mdi-music-note
+
+    - Books:
+        href: https://books.taverncloud.win # Your Book Server URL
+        description: Book Library
+        icon: mdi-book-open-page-variant
+
+    - Photos:
         href: http://photos.taverncloud.win # Your Immich web URL
-        description: Photo Management
+        description: Photo Library
         icon: immich.svg
         # This tells Homepage to check the status of the Immich container
         docker:
@@ -27,3 +37,4 @@
         icon: openai.svg
         docker:
           container: open-webui
+
