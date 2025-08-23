@@ -20,3 +20,17 @@ The file needs to be edited after the initial setup, and withs sudo privileges i
 'overwriteprotocol' => 'https',
 'trusted_proxies'   => ['172.16.0.0/12'],
 ```
+
+## Configuring ONLYOFFICE Integration
+
+- Install the ONLYOFFICE Document Server and App in the Nextcloud App Store.
+- Configure the ONLYOFFICE Document Server URL in Nextcloud:
+
+```php
+'trusted_domains' =>
+  array (
+    0 => 'nextcloud.taverncloud.win',
+    1 => 'localhost:8080',
+    2 => 'app', // <-- THIS IS THE CRUCIAL FIX
+  ),
+```
