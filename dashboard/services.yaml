@@ -1,0 +1,29 @@
+- Media:
+    - Jellyfin:
+        href: https://flix.taverncloud.win # Your Jellyfin URL
+        description: Media Server
+        icon: jellyfin.png
+
+    - Immich:
+        href: http://photos.taverncloud.win # Your Immich web URL
+        description: Photo Management
+        icon: immich.svg
+        # This tells Homepage to check the status of the Immich container
+        docker:
+          container: immich_server # This is the typical name, check 'docker ps' to confirm
+
+- Cloud:
+    - Nextcloud:
+        href: https://nextcloud.taverncloud.win # Your public Nextcloud URL
+        description: File Sync and Share
+        icon: nextcloud.png
+        docker:
+          container: nextcloud
+
+- AI Tools:
+    - Open WebUI:
+        href: http://chat.taverncloud.win # Your Open WebUI URL
+        description: LLM Chat Interface
+        icon: openai.svg
+        docker:
+          container: open-webui

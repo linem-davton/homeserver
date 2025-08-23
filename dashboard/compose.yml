@@ -1,0 +1,16 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - "3001:3000"
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=taverncloud.win
+    volumes:
+      # This connects to Docker to get container status
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # This maps your local config files into the container
+      - ./settings.yaml:/app/config/settings.yaml
+      - ./widgets.yaml:/app/config/widgets.yaml
+      - ./services.yaml:/app/config/services.yaml
+    restart: unless-stopped
