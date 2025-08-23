@@ -46,3 +46,7 @@ Ensure that the `.env` file is set up with the CouchDB credentials and PASSPHRAS
 ```bash
 ./decode-setupuri.sh
 ```
+
+## Known Issues
+
+- CouchDB in WSL2 docker while VPN is on causes issues with LiveSync.
