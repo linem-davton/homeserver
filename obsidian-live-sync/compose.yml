@@ -11,4 +11,4 @@ services:
       - ./couchdb-etc:/opt/couchdb/etc/local.d
     ports:
       - 5984:5984
-    restart: unless-stopped
+    restart: always
