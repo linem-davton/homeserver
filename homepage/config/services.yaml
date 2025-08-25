@@ -1,37 +1,33 @@
 - Media:
     - Movies:
         href: https://flix.taverncloud.win # Your Jellyfin URL
-        description: Movies, TV Shows, and more
         icon: jellyfin.png
 
     - Music:
         href: https://music.taverncloud.win # Your Jellyfin Music URL
-        description: Music Library
         icon: mdi-music-note
 
     - Books:
         href: https://books.taverncloud.win # Your Book Server URL
-        description: Book Library
         icon: mdi-book-open-page-variant
+
+
+- Cloud:
+    - Nextcloud:
+        href: https://nextcloud.taverncloud.win # Your public Nextcloud URL
+        icon: nextcloud.png
+        docker:
+          container: nextcloud
 
     - Photos:
         href: http://photos.taverncloud.win # Your Immich web URL
-        description: Photo Library
         icon: immich.svg
         # This tells Homepage to check the status of the Immich container
         docker:
           container: immich_server # This is the typical name, check 'docker ps' to confirm
 
-- Cloud:
-    - Nextcloud:
-        href: https://nextcloud.taverncloud.win # Your public Nextcloud URL
-        description: File Sync and Share
-        icon: nextcloud.png
-        docker:
-          container: nextcloud
-
 - AI Tools:
-    - Open WebUI:
+    - AI Chat:
         href: http://chat.taverncloud.win # Your Open WebUI URL
         description: LLM Chat Interface
         icon: openai.svg
